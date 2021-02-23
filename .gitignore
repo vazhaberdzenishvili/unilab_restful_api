@@ -1,0 +1,5 @@
+.idea
+__pycache__/
+venv
+app1.py
+identifier.sqlite
