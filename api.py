@@ -12,8 +12,6 @@ app.config["PROPAGATE_EXCEPTIONS"] = True
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
 
-
-
 @app.route("/")
 def home():
     return redirect("https://github.com/vazhaberdzenishvili/unilab_restful_api/tree/main"), 302
