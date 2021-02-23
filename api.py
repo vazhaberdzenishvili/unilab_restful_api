@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, redirect
 from flask_restful import Api
 from resources.store import itemList, items
 from flask_jwt import JWT
@@ -15,6 +15,11 @@ app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 @app.before_first_request
 def create_table():
     db.create_all()
+
+
+@app.route("/")
+def home():
+    return redirect("https://github.com/vazhaberdzenishvili/unilab_restful_api/tree/main"), 302
 
 
 api = Api(app)
