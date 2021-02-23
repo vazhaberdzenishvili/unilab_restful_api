@@ -12,9 +12,6 @@ app.config["PROPAGATE_EXCEPTIONS"] = True
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
 
-@app.before_first_request
-def create_table():
-    db.create_all()
 
 
 @app.route("/")
